@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- pull in bootstrap with a cdn link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- pull in personal style sheet -->
+  <link rel="stylesheet" href="tictactoe.css">
+  <!-- Title of the page -->
+  <title>Tic-Tac-Toe</title>
+</head>
+<!-- setting the background of the page to blue from bootstrap -->
+<body class="bg-primary">
+  <!-- creating a div with a game class and using the container class from bootstrap -->
+  <div class="game container">
+    <!-- creating the title of the page that is visible to the user, aligning the text center using bootstrap -->
+    <h1 id="title" class="text-center">Tic-Tac-Toe</h1>
+    <!-- creating a div to hold the cells that define the game with an id of cells to use in the js file -->
+    <div id="cells">
+      <!-- each cell is created with a class of cell used in the js, text aligned center a dark border 
+        and an id that is used for an index -->
+      <div class="cell text-center border border-dark border-2 display-2" id="0"></div>
+      <div class="cell text-center border border-dark border-2 display-2" id="1"></div>
+      <div class="cell text-center border border-dark border-2 display-2" id="2"></div>
+      <div class="cell text-center border border-dark border-2 display-2" id="3"></div>
+      <div class="cell text-center border border-dark border-2 display-2" id="4"></div>
+      <div class="cell text-center border border-dark border-2 display-2" id="5"></div>
+      <div class="cell text-center border border-dark border-2 display-2" id="6"></div>
+      <div class="cell text-center border border-dark border-2 display-2" id="7"></div>
+      <div class="cell text-center border border-dark border-2 display-2" id="8"></div>
+    </div>
+    <!-- creating a page break -->
+    <br>
+    <!-- creating a div to hold the game summary and reset button, aligned center -->
+    <div class="row align-items-center">
+        <!-- using an h2 with a class to align the text center  -->
+        <h2 class="text-center" id="summary"></h2>
+        <!-- creating my reset button which invokes the newGame function from the js file -->
+        <button onclick="newGame()" class="reset-button btn btn-dark">Reset Game</button>
+    </div>
+  </div>
+  <!-- pulling in jquery  -->
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <!-- pulling in the js file -->
+  <script src="tictactoe.js"></script>
+</body>
+</html>
